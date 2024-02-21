@@ -1,6 +1,3 @@
-
-
-
 #include "../libs/chesto/src/Constraint.hpp"
 #include "../libs/chesto/src/Container.hpp"
 #include "../libs/chesto/src/RootDisplay.hpp"
@@ -22,8 +19,14 @@ SetupScreen::SetupScreen()
 	logoCon->add(&icon);
 	logoCon->add(&title);
 
+    Container* underLogoCon = new Container(ROW_LAYOUT, 10);
+
+    underLogoCon->add(&icon);
+    underLogoCon->add(&title);
+
     // constraints
-    logoCon->constrain(ALIGN_TOP | ALIGN_CENTER_HORIZONTAL, 25);
+    logoCon->constrain(ALIGN_TOP | ALIGN_CENTER_HORIZONTAL, 10);
+    underLogoCon->constrain(ALIGN_BOTTOM | ALIGN_CENTER_HORIZONTAL, 100);
     text.constrain(ALIGN_CENTER_BOTH);
     btnQuit.constrain(ALIGN_LEFT | ALIGN_BOTTOM, 90);
 
@@ -31,6 +34,7 @@ SetupScreen::SetupScreen()
 
 	super::append(logoCon);
     super::append(&text);
+	super::append(underLogoCon);
     super::append(&btnQuit);
 }
 

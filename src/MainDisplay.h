@@ -1,7 +1,9 @@
 #include "../libs/chesto/src/RootDisplay.hpp"
 
+#ifdef __WIIU__
 #define PLATFORM "Wii U"
-
+ #endif
+ 
 class MainDisplay : public RootDisplay
 {
     public:

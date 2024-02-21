@@ -68,7 +68,8 @@
         "param.h": "c",
         "iosupport.h": "c",
         "*.impl": "c",
-        "debugscreen_custom.h": "c"
+        "debugscreen_custom.h": "c",
+        "*.ipp": "cpp"
     },
     "cmake.configureOnOpen": true
 }
